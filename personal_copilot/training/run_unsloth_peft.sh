@@ -10,7 +10,6 @@ CUDA_VISIBLE_DEVICES=0 WANDB_PROJECT=personal-code-copilot python train.py \
 --logging_steps 5 \
 --log_level "info" \
 --logging_strategy "steps" \
---evaluation_strategy "steps" \
 --save_strategy "steps" \
 --push_to_hub \
 --hub_private_repo True \
