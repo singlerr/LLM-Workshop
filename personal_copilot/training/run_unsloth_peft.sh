@@ -1,7 +1,7 @@
 CUDA_VISIBLE_DEVICES=0 WANDB_PROJECT=personal-code-copilot python train.py \
 --seed 11 \
---model_name_or_path "codellama/CodeLlama-7b-Instruct-hf" \
---dataset_name "smangrul/hug_stack" \
+--model_name_or_path "Qwen/Qwen2.5-Coder-7B" \
+--dataset_name "singlerr/minecraft_modding" \
 --splits "train" \
 --max_seq_len 2048 \
 --max_steps 2000 \
@@ -21,13 +21,13 @@ CUDA_VISIBLE_DEVICES=0 WANDB_PROJECT=personal-code-copilot python train.py \
 --weight_decay 0.1 \
 --warmup_ratio 0.1 \
 --max_grad_norm 1.0 \
---output_dir "codellama-hugcoder" \
+--output_dir "qwen-mcoder" \
 --per_device_train_batch_size 16 \
 --per_device_eval_batch_size 16 \
 --gradient_accumulation_steps 4 \
 --gradient_checkpointing True \
 --use_reentrant True \
---dataset_text_field "text" \
+--dataset_text_field "content" \
 --test_size 0.1 \
 --fim_rate 0.5 \
 --fim_spm_rate 0.0 \

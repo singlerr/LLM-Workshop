@@ -1,5 +1,5 @@
 accelerate launch --config_file "configs/fsdp_config.yaml" train.py \
---model_path "codellama/CodeLlama-7b-Instruct-hf" \
+--model_path "Qwen/Qwen2.5-Coder-7B-Instruct" \
 --dataset_name "smangrul/hug_stack" \
 --splits "train" \
 --max_seq_len 2048 \
